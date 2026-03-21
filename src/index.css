@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Manga Minimal Theme - Red & White */
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 0 0% 100%; /* pure white */
+    --foreground: 0 0% 10%; /* near black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Primary (Manga Red Accent) */
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 85% 60%;
+
+    /* Secondary (light gray panels) */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders (important for manga frame feel) */
+    --border: 0 0% 15%;
+    --input: 0 0% 85%;
+    --ring: 0 85% 50%;
+
+    --success: 140 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    /* Shape */
+    --radius: 0.25rem; /* sharper corners */
+
+    /* Minimal Gradients (mostly removed) */
+    --gradient-primary: linear-gradient(
+      180deg,
+      hsl(0 85% 50%) 0%,
+      hsl(0 85% 55%) 100%
+    );
+    --gradient-subtle: none;
+    --gradient-card: none;
+
+    /* Shadows (very minimal, manga is flat) */
+    --shadow-elegant: none;
+    --shadow-glow: 0 0 0 transparent;
+
+    --transition-smooth: all 0.2s ease;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 85% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 85% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 30%;
+    --input: 0 0% 20%;
+    --ring: 0 85% 55%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 30%;
+    --sidebar-ring: 0 85% 55%;
+  }
+}
+
+/* Global Styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "Bangers", sans-serif;
+  }
+}
+
+/* Manga-style utilities */
+@layer components {
+  .manga-panel {
+    @apply border-2 border-black bg-white;
+  }
+
+  .manga-button {
+    @apply border-2 border-black bg-primary text-white px-4 py-2 font-bold uppercase tracking-wide;
+  }
+
+  .manga-button:hover {
+    @apply bg-white text-black;
+  }
+}
