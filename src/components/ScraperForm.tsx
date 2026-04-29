@@ -111,14 +111,14 @@ export const ScraperForm = ({
       return;
     }
 
-    if (!sheetName.trim() || !sheetId.trim()) {
-      toast({
-        title: "Google Sheets info required",
-        description: "Please enter both Google Sheet name and ID",
-        variant: "destructive",
-      });
-      return;
-    }
+    // if (!sheetName.trim() || !sheetId.trim()) {
+    //   toast({
+    //     title: "Google Sheets info required",
+    //     description: "Please enter both Google Sheet name and ID",
+    //     variant: "destructive",
+    //   });
+    //   return;
+    // }
     onScrape(finalQuery, source, sheetName, sheetId);
   };
 
