@@ -13,7 +13,7 @@ type ScraperSource =
   | "business-list"
   | "serper search"
   | "serper places";
-const baseURL = "https://b742-221-121-96-45.ngrok-free.app";
+const baseURL = "https://leadagentapi.onrender.com";
 //const baseURL="http://192.168.10.8:5000"
 
 const Index = () => {
